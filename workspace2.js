@@ -10,7 +10,7 @@ exports.getAllBlogs = async (req, res) => {
             {$skip: skip},
             { $limit: limit },
         ]);
-        res.status(201).json(savedBlog);
+        res.status(201).json(blog);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
